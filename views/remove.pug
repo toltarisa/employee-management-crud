@@ -1,0 +1,40 @@
+doctype html
+head
+    title Remove Employee
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="/css/style.css")
+
+body
+    nav.navbar.navbar-inverse
+        .container
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') Personel Bilgi Sistemi
+            #navbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/') Anasayfa
+                    li
+                       a(href='/add') Eleman Ekle
+                    li
+                        a(href="/update") Kaydı Düzenle
+                    li
+                        a(href="/remove") Kaydı Sil
+    br
+    br
+
+div.container
+    h2 Silmek İstediğiniz Çalışanı Seçiniz
+    ul.list-group
+        each emps in emp
+            li.list-group-item  
+                a.delete-emp(data-id=emps._id href="/" )= emps.name 
+
+
+script(src="/bower_components/jquery/dist/jquery.js")
+script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+script(src="/js/index.js")

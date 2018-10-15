@@ -1,0 +1,45 @@
+doctype html
+head
+    title Add Employee
+    link(rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css")
+    link(rel="stylesheet" href="/css/style.css")
+
+body
+    nav.navbar.navbar-inverse
+        .container
+            .navbar-header
+                button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/') Personel Bilgi Sistemi
+            #navbar.collapse.navbar-collapse
+                ul.nav.navbar-nav
+                    li
+                        a(href='/') Anasayfa
+                    li
+                       a(href='/add') Eleman Ekle
+                    li
+                        a(href="/update") Kaydı Düzenle
+                    li
+                        a(href="/remove") Kaydı Sil
+                    
+    br
+    br
+    form(action="/add" method="POST")
+        div.container
+            div.form-group
+                label(for="name") Adı :
+                input(type="text" name="name" class="form-control" required)
+                br
+                label(for="surname") Soyadı :
+                input(type="text" name="surname" class="form-control" required)
+                br
+                label(for="job") Meslegi :
+                input(type="text" name="job" class="form-control" required)
+                br
+                label(for="salary") Maaşı :
+                input(type="text" name="salary" class="form-control" required)
+                br
+                input(type="submit" class="btn btn-primary btn-lg btn-block" value="Kaydet")
