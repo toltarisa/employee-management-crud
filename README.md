@@ -7,3 +7,7 @@ made my 1st grade term  project with Node js , Express js &amp; Mongo DB
     $ cd employee-management-crud
     $ npm install
     $ nodemon app.js
+
+![employee-management-crud](/product.png)
+
+![employee-management-crud](/product1.png)
